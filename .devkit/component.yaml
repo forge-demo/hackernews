@@ -4,11 +4,11 @@ kind: Component
 metadata:
   name: hackernews
 profiles:
-  - name: default
-    kubernetes:
-      pod:
-        name: hackernews
-        image: ghcr.io/b4fun/forge/devkit/workspace-node-17-bullseye:v2022060301
-      patches:
-        - # below is a sample pod spec for current project, please edit based on the project settings
-          podSpec: pod-spec.yaml
+- name: default
+  kubernetes:
+    pod:
+      name: hackernews
+      image: ghcr.io/b4fun/forge/devkit/workspace-node-17-bullseye:v2022060301
+    patches:
+    - # below is a sample pod spec for current project, please edit based on the project settings
+      podSpec: pod-spec.yaml
