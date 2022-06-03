@@ -16,7 +16,7 @@
     }
   ],
   "scripts": {
-    "dev": "nuxt dev",
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider NUXT_HOST=0.0.0.0 nuxt dev",
     "build": "nuxt build",
     "start": "nuxt start",
     "dev-spa": "nuxt dev --spa",

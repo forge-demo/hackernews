@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://gist.githubusercontent.com/bcho/e19fa748745a985aa7393530acff24fa/raw/5a16ff4eb422522204e5151cd698311c855e03a2/forge-devkit-component.json
+apiVersion: v1alpha1
+kind: Component
+metadata:
+  name: hackernews
+profiles:
+  - name: default
+    kubernetes:
+      pod:
+        name: hackernews
+        image: ghcr.io/b4fun/forge/devkit/workspace-node-17-bullseye:v2022060301
+      patches:
+        - podSpec: ./pod-spec.yaml

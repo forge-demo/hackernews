@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hackernews
+spec:
+  containers:
+    - args:
+        - "--log-level"
+        - "12"
+      command:
+        - devkit-server
+      image: ghcr.io/b4fun/forge/devkit/workspace-node-17-bullseye:v2022060301
+      imagePullPolicy: IfNotPresent
+      name: devkit-main
+      resources:
+        limits:
+          cpu: "2"
+          memory: 2Gi
+        requests:
+          cpu: "1"
+          memory: 1Gi
+      securityContext:
+        allowPrivilegeEscalation: false
